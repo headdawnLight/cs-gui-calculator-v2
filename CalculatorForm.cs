@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace cs_gui_calculator
+namespace cs_gui_calculator_v2
 {
     public partial class CalculatorForm : Form
     {
@@ -137,5 +137,45 @@ namespace cs_gui_calculator
             operationLabel.Text = resultValue + operationPerformed;
             isOperationPerformed = true;
         }
+
+        // Runs the factor, the square root, the square and the log buttons
+        private void MathButtons_Click(object sender, EventArgs e)
+        {
+            double num = Double.Parse(numBox.Text);
+
+            Button mathButtons = (Button)sender;
+
+            switch (mathButtons.Text)
+            {
+                case "X!":
+                    int recursiveFactorialCalculation(int factorial)
+                    {
+                        if (factorial == 0 || factorial == 1 || factorial < 0)
+                        {
+                            return 1;
+                        }
+                        return factorial * recursiveFactorialCalculation(factorial - 1);
+                    }
+                    int factNum = int.Parse(numBox.Text);
+                    int result1 = recursiveFactorialCalculation(factNum);
+                    numBox.Text = result1.ToString();
+                    break;
+                case "√x":
+                    double result2 = Math.Sqrt(num);
+                    numBox.Text = result2.ToString();
+                    break;
+                case "x²":
+                    double result3 = Math.Pow(2,num);
+                    numBox.Text = result3.ToString();
+                    break;
+                case "Log10":
+                    double result4 = Math.Log10(num);
+                    numBox.Text = result4.ToString();
+                    break;
+            }
+            resultValue = Double.Parse(numBox.Text);
+            operationLabel.Text = resultValue.ToString();
+            isOperationPerformed = true;
+        }        
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace cs_gui_calculator
+namespace cs_gui_calculator_v2
 {
     partial class CalculatorForm
     {
@@ -283,8 +283,8 @@ namespace cs_gui_calculator
             this.FactorButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FactorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.FactorButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.FactorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.FactorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.FactorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.FactorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.FactorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FactorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FactorButton.Location = new System.Drawing.Point(12, 115);
@@ -293,14 +293,15 @@ namespace cs_gui_calculator
             this.FactorButton.TabIndex = 22;
             this.FactorButton.Text = "X!";
             this.FactorButton.UseVisualStyleBackColor = false;
+            this.FactorButton.Click += new System.EventHandler(this.MathButtons_Click);
             // 
             // SqrRootButton
             // 
             this.SqrRootButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SqrRootButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.SqrRootButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.SqrRootButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.SqrRootButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.SqrRootButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.SqrRootButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.SqrRootButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SqrRootButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.SqrRootButton.Location = new System.Drawing.Point(12, 161);
@@ -309,14 +310,15 @@ namespace cs_gui_calculator
             this.SqrRootButton.TabIndex = 23;
             this.SqrRootButton.Text = "√x";
             this.SqrRootButton.UseVisualStyleBackColor = false;
+            this.SqrRootButton.Click += new System.EventHandler(this.MathButtons_Click);
             // 
             // SquareButton
             // 
             this.SquareButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.SquareButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.SquareButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.SquareButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.SquareButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.SquareButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.SquareButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.SquareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SquareButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.SquareButton.Location = new System.Drawing.Point(88, 161);
@@ -325,14 +327,15 @@ namespace cs_gui_calculator
             this.SquareButton.TabIndex = 24;
             this.SquareButton.Text = "x²";
             this.SquareButton.UseVisualStyleBackColor = false;
+            this.SquareButton.Click += new System.EventHandler(this.MathButtons_Click);
             // 
             // LogButton
             // 
             this.LogButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.LogButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.LogButton.FlatAppearance.CheckedBackColor = System.Drawing.Color.Red;
-            this.LogButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.LogButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.LogButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.LogButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.LogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.LogButton.Location = new System.Drawing.Point(164, 161);
@@ -341,6 +344,7 @@ namespace cs_gui_calculator
             this.LogButton.TabIndex = 25;
             this.LogButton.Text = "Log10";
             this.LogButton.UseVisualStyleBackColor = false;
+            this.LogButton.Click += new System.EventHandler(this.MathButtons_Click);
             // 
             // MultiplyButton
             // 
@@ -497,7 +501,7 @@ namespace cs_gui_calculator
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(322, 405);
+            this.ClientSize = new System.Drawing.Size(322, 399);
             this.Controls.Add(this.LogButton);
             this.Controls.Add(this.SquareButton);
             this.Controls.Add(this.SqrRootButton);
