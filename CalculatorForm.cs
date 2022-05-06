@@ -21,6 +21,16 @@ namespace cs_gui_calculator_v2
             InitializeComponent();
         }
 
+        // the result fits the num box
+        private void LimitTheNumBox()
+        {
+            if (numBox.Text.Length > 13)
+            {
+                numBox.Text = numBox.Text.Substring(0, 12);
+            }
+        }
+
+        // the number box stays in focus
         private void FocusOnTheNumBox()
         {
             // Set focus to control
@@ -29,6 +39,11 @@ namespace cs_gui_calculator_v2
             numBox.SelectionStart = numBox.Text.Length == 0 ? 0 : numBox.Text.Length;
             // Set text-selection length (in your case 0 = no blue text)
             numBox.SelectionLength = 0;
+        }
+
+        private void CalculatorForm_Load(object sender, EventArgs e)
+        {
+            FocusOnTheNumBox();
         }
 
         // Runs the number and comma buttons
@@ -155,6 +170,8 @@ namespace cs_gui_calculator_v2
                     numBox.Text = (resultValue / Double.Parse(numBox.Text)).ToString();
                     break;
             }
+
+            LimitTheNumBox();
             resultValue = Double.Parse(numBox.Text);
             operationLabel.Text = resultValue + operationPerformed;
             isOperationPerformed = true;
@@ -196,6 +213,8 @@ namespace cs_gui_calculator_v2
                     numBox.Text = result4.ToString();
                     break;
             }
+
+            LimitTheNumBox();
             resultValue = Double.Parse(numBox.Text);
             operationLabel.Text = resultValue.ToString();
             isOperationPerformed = true;
@@ -268,7 +287,7 @@ namespace cs_gui_calculator_v2
                 BackspaceButton.PerformClick();
         }
 
-        // gets fired when the focus is inside of your numBox.
+        // gets fired when the focus is inside of the numBox.
         private void numBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             CalculatorForm_KeyPress(sender, e);
