@@ -495,6 +495,8 @@ namespace cs_gui_calculator_v2
             this.numBox.Size = new System.Drawing.Size(298, 49);
             this.numBox.TabIndex = 0;
             this.numBox.Text = "0";
+            this.numBox.SelectionStart = 1;
+            this.numBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numBox_KeyPress);
             // 
             // CalculatorForm
             // 
