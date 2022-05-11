@@ -7,9 +7,13 @@ This is a simple calculator program running in a graphical user interface. It wa
 A gui (graphical user interface) is a system of interactive visual components for computer software. A gui displays objects that convey information, and represent actions that can be taken by the user. 
 The objects change color, size, or visibility when the user interacts with them.
 
-[cs-gui-calculator](https://github.com/headdawnLight/cs-gui-calculator.git) was able to perform basic arithmetic operations such as addition(+), subtraction(-), multiplication(*) and division(/)).
+An element receives a click event when a pointing device button (such as a mouse's primary mouse button) is both pressed and released while the pointer is located inside the element.
 
-[cs-gui-calculator-v2](https://github.com/headdawnLight/cs-gui-calculator-v2.git) can perform mathematical operations such as factorial, square root, exponent, logarithm.
+KeyboardEvent objects describe a user interaction with the keyboard; each event describes a single interaction between the user and a key (or combination of a key with modifier keys) on the keyboard. The event type ( keydown , keypress , or keyup ) identifies what kind of keyboard activity occurred.
+
+[cs-gui-calculator](https://github.com/headdawnLight/cs-gui-calculator.git) was able to perform basic arithmetic operations such as addition(+), subtraction(-), multiplication(*) and division(/)). Also, only click event functions were available in this version. It was not possible to use the program only with the keyboard.
+
+[cs-gui-calculator-v2](https://github.com/headdawnLight/cs-gui-calculator-v2.git) can perform mathematical operations such as factorial, square root, exponent, logarithm. Also, keypress events are available in this version in addition to the click event functions. It is possible to use the program only through the keyboard.
 
 In summary, in the previous version we were able to perform:
 
@@ -46,7 +50,7 @@ Run and test the source codes in your own development environment.
 
 ## Usage
 
-![cs-gui-cal](https://user-images.githubusercontent.com/82842186/167228819-ea199c94-7789-4308-9c66-b971a7fd8894.gif)
+![cs-gui-cal](https://user-images.githubusercontent.com/82842186/167945993-f00a58df-b519-468f-927c-7d4b0ed87f37.gif)
 
 ## License
 
