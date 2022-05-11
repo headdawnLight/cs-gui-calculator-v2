@@ -21,7 +21,7 @@ namespace cs_gui_calculator_v2
             InitializeComponent();
         }
 
-        // the result fits the num box
+        // the result fits to the num box
         private void LimitTheNumBox()
         {
             if (numBox.Text.Length > 13)
@@ -205,7 +205,7 @@ namespace cs_gui_calculator_v2
                     numBox.Text = result2.ToString();
                     break;
                 case "x²":
-                    double result3 = Math.Pow(2,num);
+                    double result3 = Math.Pow(num,2);
                     numBox.Text = result3.ToString();
                     break;
                 case "Log10":
